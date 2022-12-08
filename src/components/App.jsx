@@ -13,8 +13,8 @@ export default function App() {
   const options = ['good', 'neutral', 'bad'];
 
   const handleFeedbackChange = event => {
-    console.log(event.target.name);
-    switch (event.target.name) {
+    const { name } = event.target;
+    switch (name) {
       case 'good':
         setGoodFeedback(prevState => prevState + 1);
         break;
